@@ -1,0 +1,60 @@
+.feedback {
+  background-color: #eecdb1;
+  margin-top: 30px;
+  border-radius: 15px;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.ava img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #ff9a53;
+  margin: 30px;
+}
+.name {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.time {
+  float: right;
+  margin-right: 20px;
+}
+.ava {
+  display: inline-block;
+}
+
+.info {
+  float: right;
+  /*background-color: black;*/
+  width: 1460px;
+}
+h1 {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  text-align: center;
+}
+.newFeedback {
+  margin-top: 70px;
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 200px;
+}
+.newComment{
+  height: 100%;
+  width: 1000px;
+  border-radius: 6px;
+  border: 1px solid black;
+  text-align: center;
+}
+.send {
+  width: 100px;
+  height: 50px;
+  background-color: #4b62ff;
+  border: 0;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+
+}

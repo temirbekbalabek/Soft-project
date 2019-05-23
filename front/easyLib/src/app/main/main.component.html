@@ -1,0 +1,65 @@
+<ng-container>
+ <div *ngIf="!authorSelected">
+    <div *ngIf="!selected">
+        <div class="head">
+          <h1>WELCOME TO EASYLIB!</h1>
+          <button id="login" (click)="loginbtnclicked()"><a style="text-decoration: none;color: white">Log in</a></button>
+          <button id="logout" (click)="logout()">Log Out </button>
+          </div>
+          <div class="welcome_page"> 
+            <div class="categories">
+              <h2 style="text-align: center;color:brown;">Genres</h2>
+              <div *ngFor = "let c of categories">
+                  <!-- <input type="text" [(ngModel)]="c.name">
+                   -->
+                  <a id="genres" (click)="getSelectedGenreBooks(c)">{{c.name}}</a>
+              </div>
+            </div> 
+            <div class="authors">
+              <h2 style="text-align: center;color:brown;">Authors</h2>
+              <div *ngFor="let a of authors">
+                <a (click)="getSelectedAuthorBooks(a)" id="authors">{{a.name+' '+a.surname}}</a>
+              </div>
+            </div>
+            <div class="search">
+              <input id="searchtwo" placeholder="search" [(ngModel)]="searchName">
+            </div>
+            <button id="search" (click)="search()">Search</button>
+            <!-- <div class="books">
+                <div class="aboutbook" *ngFor="let b of books">
+                    <img style="margin-top:10px;width:120px" src="https://cdn.shopify.com/s/files/1/0882/3478/files/Book_7fce494e-606f-43d0-89a2-51b698aa3369_1400x.png?v=1553019482">
+                    <div class="bookdesc">
+                      <a style=" position:relative;margin-left:25px;text-transform: uppercase">{{b.title}}</a><br>
+                      <a style="margin-left:10px">Genre:{{b.category.name}}</a><br>
+                      <a style="margin-left:10px">Year:{{b.year}}</a><br>
+                      <a style="margin-left:10px">Auhtor:{{b.author.name+" "+b.author.surname}}</a><br>
+                      <a style="margin-left:10px">Pages:{{b.page_amount}}</a><br>
+                    </div>
+                </div>
+            </div> -->
+            <div class="books">
+                <div class="row">
+                    <div class="column" *ngFor="let b of books" (click)="getBookDetail(b)">
+                      <div class="content">
+                          <img style="margin-top:10px;width:100px; height: 120px" src="{{b.image}}">
+                          <div class="bookdesc">
+                            <a style=" position:relative;margin-left:25px;text-transform: uppercase">{{b.title}}</a><br>
+                            <a style="margin-left: 1px;">Genre:{{b.category.name}}</a><br>
+                            <a style="margin-left:10px">Year:{{b.year}}</a><br>
+                            <a style="margin-left:10px">Auhtor:{{b.author.name+" "+b.author.surname}}</a><br>
+                            <a style="margin-left:10px">Pages:{{b.page_amount}}</a><br>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="footer">
+            <h3 id="about_us">ABOUT US</h3>
+            <a id="privacy" href="#">Privacy</a>
+            <a id="faq" href="#">FAQ</a>
+            <a id="contactus" href="#">Contact us</a>
+          </div>
+    </div>
+ </div>
+</ng-container>

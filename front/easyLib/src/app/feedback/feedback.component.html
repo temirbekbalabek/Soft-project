@@ -1,0 +1,17 @@
+<h1>Отзывы:</h1>
+<ng-container *ngFor="let f of feedbacks; let i = index">
+  <div class="feedback">
+    <div class="ava">
+      <img src="{{clients[i]?.image}}">
+    </div>
+    <div class="info">
+      <p class="name">{{clients[i]?.name}} {{clients[i]?.surname}}</p>
+      <p class="time">{{f.date}}</p>
+      <p class="comment">{{f.comment}}</p>
+    </div>
+  </div>
+</ng-container>
+<div class="newFeedback">
+  <textarea class="newComment" placeholder="Comment..." cols="40" rows="10" [(ngModel)]="comment"></textarea>
+  <p><input class="send" type="submit" value="Send" (click)="sendFeedback()"></p>
+</div>

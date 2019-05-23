@@ -1,0 +1,25 @@
+<ng-container>
+    <div class="headerOfGenre">
+      <h1 style="position:relative;top:10px;">Genre: {{selectedCategory?.name.toUpperCase()}}</h1>
+    </div>
+    <div class="bodyOfGenre">
+      <div class="genrebooks">
+        <div class="row">
+          <div class="column" *ngFor="let gb of selectedCategoryBooks" (click)="getBookDetail(gb)">
+            <div class="content">
+              <img style="margin-top:10px;width:120px" src="{{gb.image}}">
+              <div class="bookdesc">
+                <ul>
+                  <li class="b" style="text-transform:uppercase;color:rgba(80, 1, 1, 0.7)">{{ gb.title }}</li>
+                  <li class="b">{{ gb.category.name }}</li>
+                  <li class="b">{{ gb.year }}</li>
+                  <li class="b">{{ gb.author.name+' '+gb.author.surname}}</li>
+                  <li class="b">{{ gb.page_amount }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</ng-container>

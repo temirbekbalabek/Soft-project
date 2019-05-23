@@ -1,0 +1,60 @@
+<div class="bookBody">
+  <img (click)="goToCart()" class="cart" src="https://www.freepngimg.com/thumb/cart/1-2-cart-png-picture.png">
+  <div style="text-align: center; position: relative; float: right; margin-right: 100px; color: #fcffe8; background-color: #2054a8; border-radius: 50%; padding: 3px; font-weight: bold">{{cart.books.length}}</div>
+  <div class="bookInfo">
+    <h1>{{selectedBook.title}}</h1>
+    <img class="mainImg" src="{{selectedBook.image}}">
+    <div class="authorName">By <a href="https://www.google.com/search?q={{selectedBook.author.name}}+{{selectedBook.author.surname}}">{{selectedBook.author.name}} {{selectedBook.author.surname}}</a></div>
+    <div class="description">About the Book<br>
+      <span>{{selectedBook.description}}</span>
+    </div>
+    <div class="pageAmount">
+      Pages<br>
+      <span>
+        {{selectedBook.page_amount}}
+      </span>
+    </div>
+    <div class="publicationDate">
+      Publication date<br>
+      <span>
+        {{selectedBook.year}}
+      </span>
+    </div>
+    <button class="buy" (click)="addToCart(selectedBook)">Want to buy</button>
+    <div class="genre">
+      Genre<br>
+      <span>
+        {{selectedBook.category.name}}
+      </span>
+    </div>
+    <div style="float: right">
+      <span style="margin-right: 20px">Also recommended to read:</span>
+      <div class="recommendations" *ngFor="let a of recommendedBooks" (click)="getBookDetail(a)">
+        <a style="font-size: 14px">{{a.title}}</a>
+        <img src="{{a.image}}">
+        <br>
+        <a style="font-size: 12px">from:</a>
+        <a style="font-size: 14px">{{a.author.name}} {{a.author.surname}}</a>
+      </div>
+    </div>
+    <h1 id="h1">Отзывы:</h1>
+    <ng-container *ngFor="let f of feedbacks; let i = index">
+      <div class="feedback">
+        <div class="ava">
+          <img src="{{clients[i]?.image}}">
+        </div>
+        <div class="info">
+          <p class="name">{{clients[i]?.name}} {{clients[i]?.surname}}</p>
+          <p class="time">{{f.date}}</p>
+          <p class="comment">{{f.comment}}</p>
+        </div>
+      </div>
+    </ng-container>
+    <div class="newFeedback">
+      <textarea class="newComment" placeholder="Comment..." cols="40" rows="10" [(ngModel)]="comment"></textarea>
+      <p><input class="send" type="submit" value="Send" (click)="sendFeedback()"></p>
+    </div>
+  </div>
+
+
+</div>

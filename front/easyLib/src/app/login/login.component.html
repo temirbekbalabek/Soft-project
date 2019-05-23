@@ -1,0 +1,142 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<ng-container *ngIf="!logged">
+  <div class="all_page">
+    <ng-container *ngIf="!noacc">
+      <div class="login">
+        <h2 id="login">Please,write...</h2>
+          <input type="text" class="username" placeholder="username" [(ngModel)]="login">
+          <input type="password" class="username" placeholder="password" [(ngModel)]="password">
+          <select class="username" name="client" required="" id="client">
+            <option value="1">admin</option>
+            <option value="2" selected="">client</option>
+          </select>
+          <button id="loginbtn" (click)="auth()">LOG IN</button>
+          <a id="noacc" (click)="noaccount()">have you got an account?</a>
+      </div>
+    </ng-container>
+    <div class="logging">
+      <div *ngIf="noacc">
+        <div class="registr">
+          <div class="sign">
+            <input style="position:relative;top:30px"type="text" class="username" placeholder="name" [(ngModel)]="rname">
+            <input style="position:relative;top:30px"type="text" class="username" placeholder="surname" [(ngModel)]="rsurname">
+            <input style="position:relative;top:30px"type="text" class="username" placeholder="username" [(ngModel)]="rusername">
+            <input  style="position:relative;top:30px" type="password" class="username" placeholder="password" [(ngModel)]="rpassword">
+            <input  style="position:relative;top:30px" type = "text" class = "username" placeholder="email" [(ngModel)] = "remail">
+            <input  style="position:relative;top:30px" type = "text" class = "username" placeholder="phone" [(ngModel)] = "rphone">
+            <button style="position:relative;top:30px" id="loginbtnn" (click)="signup()">SIGN IN</button>
+          </div>
+         </div>
+      </div>
+    </div>
+    
+    <div class="outing">
+        <button id="outing" [routerLink]="['']">BACK</button>
+      </div>
+  </div>
+
+</ng-container>
+
+
+<ng-container *ngIf="logged">
+  <div>
+      <div class="header">
+          <h1>HELLO, {{userr?.username.toUpperCase()}}</h1>
+      </div>
+      <div class="middle">
+        <div class="userbooks">
+          <div>
+            <ul>
+              <li>Admin ID: {{userr?.id}}</li>
+              <li>Username: {{userr?.username}}</li>
+              <li>Admin Email: {{userr?.email}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="genres">
+          <h3 style="text-align: center;color:rgba(80, 1, 1, 0.7)">GENRES</h3>
+          <div *ngFor=" let g of genres">
+            <a id="genres" (click)="getSelGenre(g)">{{ g.name }}</a>
+          </div>
+        </div>
+        <div class="authors">
+            <h3 style="text-align: center;color:rgba(80, 1, 1, 0.7)">AUTHOR</h3>
+            <div *ngFor=" let a of authors">
+              <a id="authors" (click)="getSelAuthor(a)">{{ a.name+' '+a.surname}}</a>
+            </div>
+          </div>
+          <div class="creation">
+              <button class="tablink" (click)="gclick()">GENRE</button>
+              <button class="tablink" (click)="aclick()">AUTHOR</button>
+              <button  class="tablink" (click)="bclick()">BOOK</button>
+              <button class="tablink" (click)="rclick()" >DELETIONS</button>
+              <div *ngIf="genreclicked">
+                  <input style="position:relative;left:200px;width:300px;height: 30px;border-radius: 10px;" type="text" placeholder="name" [(ngModel)]="name">
+                  <button id="createCategory" (click)="createCategory()">CREATE</button>
+              </div>
+              <div *ngIf="authorclicked">
+                  <input class="authordetail" type="text" placeholder="name" [(ngModel)]="aname">
+                  <input class="authordetail" type="text" placeholder="surname" [(ngModel)]="asurname">
+                  <input class="authordetail" type="text"  placeholder="dateofbirth" [(ngModel)]="adb">
+                  <input class="authordetail" type="text" placeholder="dateofdeath"  [(ngModel)]="add">
+                  <button style="position: relative; margin-top:80px;margin-left:50px;width:70px;height:30px;color:white;background-color: rgba(63, 87, 44, 0.9);border-radius: 10px;" (click)="createAuthor()"> CREATE</button>
+
+              </div>
+              <div *ngIf="bookcliked">
+                <input class="bookcreate" type="text" placeholder="{{p1}}" [(ngModel)]="bookName" (mousedown)="p1=''" (mouseleave)="p1='title'">
+                <select class="bookcreate" name="category" required="" id="id_category">
+                  <option value="{{g.id}}" selected="" *ngFor="let g of genres">{{g.name}}</option>
+                </select>
+                <textarea class="bookcreate" type="text" placeholder="{{p2}}" [(ngModel)]="bookDescription" (mousedown)="p2=''" (mouseleave)="p2='description'"></textarea>
+                <input class="bookcreate" type="number"  placeholder="{{p3}}" [(ngModel)]="bookYear" (mousedown)="p3=''" (mouseleave)="p3='year'">
+                <input class="bookcreate" type="number" placeholder="{{p4}}"  [(ngModel)]="bookPages" (mousedown)="p4=''" (mouseleave)="p4='page amount'">
+                <select class="bookcreate" name="author" required="" id="id_author">
+                  <option value="{{a.id}}" selected="" *ngFor="let a of authors">{{a.name}} {{a.surname}}</option>
+                </select>
+                <input class="bookcreate" type="text" placeholder="{{p5}}" [(ngModel)]="bookImage" (mousedown)="p5=''" (mouseleave)="p5='URL of image of the book'">
+                <input class="bookcreate" type="text" placeholder="{{p6}}" [(ngModel)]="bookQuantity" (mousedown)="p6=''" (mouseleave)="p6='quantity'">
+                <input class="bookcreate" type="text" placeholder="{{p7}}" [(ngModel)]="bookPrice" (mousedown)="p7=''" (mouseleave)="p7='price'">
+                <button style="position: relative; margin-top:80px;margin-left:50px;width:70px;height:30px;color:white;background-color: rgba(63, 87, 44, 0.9);border-radius: 10px;" (click)="createBook()"> CREATE</button>
+              </div>
+              <div *ngIf="reviewclicked">
+                <input style="margin-left: 20px;top:100px;left:450px;width:200px;height:30px;border-radius:10px;" type="text" [(ngModel)]="globalName">
+                <button class="authordelete" (click)="deleteGenre()"> DELETE THE GENRE</button>
+                <button class="authordelete" (click)="deleteBook()"> DELETE THE BOOK</button>
+                <button class="authordelete"(click)="deleteAuthor()"> DELETE THE AUTHOR</button>
+              </div>
+
+          </div>
+      </div>
+      <button id="logout" (click)="logout()">Log Out </button>
+  </div>
+
+    <!-- <div *ngIf="!is_staff">
+    <div class="headerJustUser">
+        <button id="logoutUser" (click)="logout()">LOGOUT</button>
+        <h2 id="userWelcome">YOU CAN READ DESCIPTTIONS AND WRITE REVIEWS</h2>
+    </div>
+    <div class="bodyJustUser">
+      <div class="userBooksnotStaff">
+          <div class="row">
+              <div class="column" *ngFor="let u of books">
+                  <div class="content">
+                      <img style="margin-top:10px;width:120px" src="https://cdn.shopify.com/s/files/1/0882/3478/files/Book_7fce494e-606f-43d0-89a2-51b698aa3369_1400x.png?v=1553019482">
+                      <div class="bookdesc">
+                        <ul>
+                          <li id="b" style="text-transform:uppercase;color:rgba(80, 1, 1, 0.7)">{{ u.title }}</li>
+                          <li id="b">{{ u.category.name }}</li>
+                          <li id="b">{{ u.year }}</li>
+                          <li id="b">{{ u.author.name+' '+u.author.surname}}</li>
+                          <li id="b">{{ u.page_amount }}</li>
+                        </ul>
+                      </div>
+                    </div> 
+                   
+              </div>
+            </div>
+      </div>
+    </div>
+  </div> -->
+</ng-container>

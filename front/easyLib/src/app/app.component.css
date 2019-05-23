@@ -1,0 +1,71 @@
+.welcome_page{
+  
+    border:0 solid black;
+    margin-top:20px;
+    height: 600px;
+    border-radius: 20px;
+    background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80')
+}
+.head{
+    position: static;
+    text-align: center;
+    color:rgba(17, 92, 39, 0.774);
+}
+#login{
+    margin-left:30px;
+    background-color: rgba(16, 63, 30, 0.774);
+    height:30px;
+    width: 70px;
+    color:white;
+    border-radius: 5px;
+   margin-top:-55px;
+    display: block;
+    margin-left:1420px;
+    font-family: "Source Sans Pro", system-ui, sans-serif;
+    cursor: pointer;
+    line-height: 1.714;
+    font-weight: 600;   
+}
+.footer{
+    position: relative;
+    background-color:rgba(17, 92, 39, 0.774);
+    border:0 solid black;
+    height:100px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#about_us{
+    color:white;
+    text-align: center;
+    margin-top:10px;
+}
+#privacy{
+    text-decoration: none;
+    margin-left:200px;
+    color:white;
+    font-size: 20px;
+}
+#faq{
+    text-decoration: none;
+    margin-left:475px; 
+    color:white;
+    font-size:20px;
+}
+#contactus{
+    text-decoration: none;
+    margin-left:460px;
+    color:white;
+    font-size:20px;
+}
+#privacy:hover{
+    color:rgba(241, 234, 132, 0.774)
+}
+#faq:hover{
+    color:rgba(241, 234, 132, 0.774)
+}
+#contactus:hover{
+    color:rgba(241, 234, 132, 0.774)
+}
+#login:active{
+    background-color:rgba(22, 70, 36, 0.918);
+}

@@ -1,0 +1,15 @@
+<div class="external">
+  <div class="products" *ngFor="let cb of cartBooks">
+    <img src="{{cb.image}}">
+    <div class="name">
+      <a href="https://www.google.com/">{{cb.title}}</a>
+      by {{cb.author.name}} {{cb.author.surname}}
+    </div>
+    <div class="price">
+      <a>Price: </a>
+      {{cb.price}}
+    </div>
+
+  </div>
+  <button (click)="makeAnOrder()">Make an order</button>
+</div>

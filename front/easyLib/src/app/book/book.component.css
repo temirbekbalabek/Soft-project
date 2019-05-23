@@ -1,0 +1,161 @@
+h1 {
+  font-size: 30px;
+}
+.cart {
+  cursor: grab;
+  width: 60px;
+  height: 50px;
+  float: right;
+  margin-top: -50px;
+  margin-right: 50px;
+}
+.buy {
+  float: right;
+  width: 200px;
+  height: 40px;
+  background-color: #3ea850;
+  margin-right: 50px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.mainImg {
+  width: 200px;
+  height: 300px;
+  /*border: 1px solid black;*/
+  border-radius: 10px;
+  float: right;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.bookBody {
+  background-color: #e2dcc5;
+  padding-top: 60px;
+}
+.bookInfo {
+  font-family: "Lucida Grande",Verdana,Geneva,Helvetica,Arial,sans-serif;
+  width: 1000px;
+  border: 0.5px solid #333;
+  border-radius: 6px;
+  margin-left: 250px;
+  background-color: white;
+  color: #333;
+  padding-left: 40px;
+}
+.authorName {
+  font-size: 25px;
+}
+.description {
+  font-size: 12px;
+  margin-top: 30px;
+}
+.description span {
+  font-size: 18px;
+}
+.pageAmount {
+  margin-top: 30px;
+  font-weight: bold;
+}
+.pageAmount span {
+  font-weight: normal;
+}
+.publicationDate {
+  margin-top: 30px;
+  font-weight: bold;
+}
+.publicationDate span {
+  font-weight: normal;
+}
+.genre {
+  margin-top: 30px;
+  font-weight: bold;
+}
+.genre span {
+  font-weight: normal;
+}
+.recommendations {
+  margin-top: 25px;
+  cursor: pointer;
+  width: 250px;
+  height: 80px;
+  border-bottom: 0.5px solid #8c8c8c;
+}
+.recommendations img {
+  width: 40px;
+  height: 50px;
+  float: left;
+
+}
+
+
+/*Feedback css*/
+
+
+
+
+.feedback {
+  margin-right: 50px;
+  background-color: #eecdb1;
+  margin-top: 30px;
+  border-radius: 15px;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.ava img{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 5px solid #ff9a53;
+  margin: 30px;
+}
+.name {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.time {
+  float: right;
+  margin-right: 20px;
+}
+.ava {
+  display: inline-block;
+}
+
+.info {
+  float: right;
+  /*background-color: black;*/
+  width: 80%;
+}
+
+#h1 {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  text-align: center;
+  margin-top: 200px;
+  width: 100%;
+}
+.newFeedback {
+  margin-top: 70px;
+  text-align: center;
+  height: 150px;
+  width: 100%;
+  margin-left: -20px;
+  margin-bottom: 200px;
+}
+.newComment{
+  height: 100%;
+  width: 93%;
+  border-radius: 6px;
+  border: 1px solid black;
+  text-align: center;
+}
+.send {
+  width: 100px;
+  height: 50px;
+  background-color: #4b62ff;
+  border: 0;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+
+}

@@ -1,0 +1,273 @@
+.welcome_page{
+  
+    border:0 solid black;
+    margin-top:20px;
+    height: 600px;
+    border-radius: 20px;
+    background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80')
+}
+.head{
+    position: static;
+    text-align: center;
+    color:rgba(17, 92, 39, 0.774);
+}
+#logout{
+  background-color: rgba(16, 63, 30, 0.774);
+  height:30px;
+  width: 70px;
+  color:white;
+  border-radius: 5px;
+  margin-top:-30px;
+  display: block;
+  margin-left:1440px;
+  font-family: "Source Sans Pro", system-ui, sans-serif;
+  cursor: pointer;
+  line-height: 1.714;
+  font-weight: 600;
+}
+#login{
+  background-color: rgba(16, 63, 30, 0.774);
+  height:30px;
+  width: 70px;
+  color:white;
+  border-radius: 5px;
+  margin-top:-55px;
+  display: block;
+  margin-left:1360px;
+  font-family: "Source Sans Pro", system-ui, sans-serif;
+  cursor: pointer;
+  line-height: 1.714;
+  font-weight: 600;
+}
+.footer{
+    position: relative;
+    background-color:rgba(17, 92, 39, 0.774);
+    border:0 solid black;
+    height:100px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#about_us{
+    color:white;
+    text-align: center;
+    margin-top:10px;
+}
+#privacy{
+    text-decoration: none;
+    margin-left:200px;
+    color:white;
+    font-size: 20px;
+}
+#faq{
+    text-decoration: none;
+    margin-left:475px; 
+    color:white;
+    font-size:20px;
+}
+#contactus{
+    text-decoration: none;
+    margin-left:460px;
+    color:white;
+    font-size:20px;
+}
+#privacy:hover{
+    color:rgba(241, 234, 132, 0.774)
+}
+#faq:hover{
+    color:rgba(241, 234, 132, 0.774)
+}
+#contactus:hover{
+    color:rgba(241, 234, 132, 0.774)
+}
+#login:active{
+    background-color:rgba(22, 70, 36, 0.918);
+}
+.categories{
+    position: relative;
+    border:0 solid black;
+    height:500px;
+    width:200px;
+    background-color:rgba(233, 215, 215, 0.8);
+    border-radius: 10px;
+    top:50px;
+    left:20px;
+    overflow: scroll;
+}
+#genres,#authors{
+    position: relative;
+    left:30px;
+    font-size:20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    color:rgba(2, 49, 2, 0.774);
+   
+}
+#genres:hover,#authors:hover{
+    color:rgba(41, 11, 151, 0.774);
+}
+.authors{
+    position: absolute;
+    border:0 solid black;
+    height:500px;
+    width:200px;
+    background-color: rgba(233, 215, 215, 0.8);
+    margin-top:-450px;
+    margin-left:1280px;
+    border-radius: 10px;
+}
+.search{
+    position: absolute;
+    border:0 solid black;
+    width:700px;
+    height:50px;
+    margin-top:-450px;
+    margin-left:330px;
+    border-radius: 10px;
+
+}
+#searchtwo{
+    height:40px;
+    width:650px;
+    border-radius: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    background-color:rgba(233, 215, 215, 0.8);
+}
+#search{
+    position: absolute;
+    margin-top:-450px;
+    margin-left:1010px;
+    height:47px;
+    width:71px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: rgba(233, 215, 215, 0.8);
+}
+.books{
+    position: absolute;
+    width:995px;
+    height:429px;
+    margin-left:250px;
+    margin-top:-380px;
+    border-radius: 10px;
+    background-color:rgba(233, 215, 215, 0.7);
+    overflow: scroll;
+}
+.content{
+    border:0 solid black;
+    /* background-color:rgba(0,0,0,0.3); */
+    height: 160px;
+    width: 270px;
+    margin-top:20px;
+    margin-left:40px;
+    border-radius: 10px;
+    color:black;
+    transition: transform .2s; 
+}
+.content:hover{
+    transform: scale(1.2); 
+    background-color:rgba(0,0,0,0.3);
+}
+.bookdesc{
+  position: relative;
+  margin-top:-120px;
+  margin-left:100px;
+  text-align: center;
+}
+::-webkit-scrollbar{
+    background-color:rgba(139, 129, 129, 0.7);
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px grey;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(2, 49, 2, 0.5);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-corner{
+      background-color: blanchedalmond;
+      
+  }
+  .row{
+      margin:8px -16px;
+  }
+  .row,
+  .row>.column{
+      padding:8px;
+  }
+  .column{
+      float:left;
+  }
+  #authors{
+      left:10px;
+  }
+  .headerOfGenre{
+      position: relative;
+      border:0 solid black;
+      background-color:rgba(233, 215, 215, 0.8);
+      width: 100%;
+      height:60px;
+      border-radius: 20px;
+      text-align: center;
+      color:rgba(156, 72, 72, 0.8);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+  }
+  .bodyOfGenre{
+      position: relative;
+      border: 0 solid black;
+      width:100%;
+      height:650px;
+      background-image: url('https://images.unsplash.com/photo-1552197680-0223a9065fa3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+      border-radius: 20px;
+
+  }
+  .genrebooks{
+      position: relative;
+      border:0 solid black;
+      width:70%;
+      height:500px;
+      background-color: rgba(233, 215, 215, 0.8);
+      border-radius: 10px;
+      top:80px;
+      left:230px;
+      overflow: scroll;
+  }
+  #toTheMain{
+    position: absolute;
+    margin-top:-700px;
+    width:50px;
+    height:40px;
+    background-color:rgba(156, 72, 72, 0.8);
+    color:white;
+    border-radius: 10px;
+    margin-left:20px;
+  }
+  .authorHeader{
+      position:relative;
+      border:0 solid black;
+      width:100%;
+      height:70px;
+      background-color:rgba(156, 72, 72, 0.2);
+      border-radius: 20px;
+  }
+  .authorBody{
+      position: relative;
+      border:0 solid black;
+      width:100%;
+      height: 680px;
+      background-image: url('https://cdn.pixabay.com/photo/2016/03/09/09/14/books-1245690_1280.jpg');
+      border-radius: 20px;
+      margin-top:10px;
+    }
+    #authorBack{
+        position: relative;
+        width:50px;
+        height:40px;
+        color:white;
+        border-radius: 10px;
+        top:15px;
+        left:20px;
+        background-color: rgba(153, 39, 39, 0.8);
+    }
